@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace IBAS_menu.Pages;
 
+
+
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
@@ -16,4 +18,9 @@ public class IndexModel : PageModel
     {
 
     }
+
+    
+    
+    
 }
+
