@@ -28,34 +28,21 @@ tr:nth-child(even) {
 </div>
 
 <table>
-  <tr>
-    <th>Dag</th>
-    <th>Varm ret</th>
-    <th>Kolde retter</th>
-  </tr>
-  <tr>
-    <td>Man 02</td>
-    <td>Græskarsuppe</td>
-    <td>Smørrebrød</td>
-  </tr>
-  <tr>
-    <td>Tirs 03</td>
-    <td>Boller i karry</td>
-    <td>Pasta salat</td>
-  </tr>
-    <tr>
-    <td>Ons 04</td>
-    <td>Hvidløgsbrød og pølser</td>
-    <td>Koldeskål</td>
-  </tr>
-    <tr>
-    <td>Tors 05</td>
-    <td>Pizza</td>
-    <td>Rugbrød</td>
-  </tr>
-    <tr>
-    <td>Fre 06</td>
-    <td>Pasta carbonara</td>
-    <td>Toast</td>
-  </tr>
+    <thead>
+        <tr>
+            <th>Uge dage</th>
+            <th>Varme retter</th>
+            <th>Kolde retter</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in IndexModel.menu)
+        {
+            <tr>
+                <td>@item.UgeDag</td>
+                <td>@item.VarmeRetter</td>
+                <td>@item.KoldeRetter</td>
+            </tr>
+        }
+    </tbody>
 </table>
